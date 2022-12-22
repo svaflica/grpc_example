@@ -1,0 +1,13 @@
+syntax = "proto3";
+
+message Request {
+  string text = 1;
+}
+
+message Response {
+  repeated string listOfStrings = 1;
+}
+
+service Tokenizer {
+  rpc get_tokens(Request) returns (Response);
+}
